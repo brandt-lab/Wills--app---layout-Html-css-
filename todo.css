@@ -1,0 +1,121 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #85015b, #110022);
+    color: aliceblue;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* To-Do App Container */
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    margin: 100px auto 20px;
+    padding: 40px 70px 30px;
+    background-color: bisque;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Header Styling */
+.todo-app h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+/* Row Styling */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #110022;
+    border-radius: 30px;
+    padding: 20px;
+    margin: 25px 0;
+    color: #fff;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    color: #fff;
+    outline: none;
+    font-size: 14px;
+}
+
+button {
+    padding: 15px 50px;
+    font-size: 15px;
+    border: none;
+    border-radius: 45px;
+    background-color: burlywood;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* To-Do List Items */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    position: relative;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: aliceblue;
+    user-select: none;
+    cursor: pointer;
+}
+
+/* Decorative Checkbox for List Items */
+ul li::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/square.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Checked List Items */
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+ul li.checked::before {
+    background-image: url(images/checkbox.png);
+}
